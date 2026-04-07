@@ -2,313 +2,317 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ORN — Travel, Made Coherent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --green:#3aaa35;--yellow:#f5c400;
-  --font:"Plus Jakarta Sans",sans-serif;
-}
 html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;}
 
-#film{position:fixed;inset:0;}
-
 /* ── SCENES ── */
-.scene{
-  position:absolute;inset:0;
-  opacity:0;pointer-events:none;
-  transition:opacity 2.4s cubic-bezier(0.4,0,0.2,1);
-}
+#film{position:fixed;inset:0;}
+.scene{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity 2.2s cubic-bezier(0.4,0,0.2,1);}
 .scene.active{opacity:1;pointer-events:all;}
 
 /* ── BACKGROUND ── */
-.scene-bg{
+.sbg{
   position:absolute;inset:-5%;
-  background-size:cover;background-position:center;background-color:#060504;
+  background-size:cover;background-position:center;background-color:#080808;
   transform:scale(1);
   transition:transform 18s cubic-bezier(0,0,0.2,1);
   will-change:transform;
-  filter:saturate(0.78) brightness(0.9);
+  filter:saturate(0.75) brightness(0.88);
 }
-.scene.active .scene-bg{transform:scale(1.09);}
-.logo-bg{background:#000 !important;inset:0;filter:none;}
-
-/* ── OVERLAY ── */
-.ov{position:absolute;inset:0;}
+.scene.active .sbg{transform:scale(1.08);}
+.sov{position:absolute;inset:0;}
 
 /* ── LETTERBOX ── */
-#lb-top,#lb-bot{position:fixed;left:0;right:0;background:#000;z-index:50;pointer-events:none;height:9vh;}
-#lb-top{top:0;}
-#lb-bot{bottom:0;}
+#lbt,#lbb{position:fixed;left:0;right:0;background:#000;z-index:50;pointer-events:none;}
+#lbt{top:0;height:8.5vh;}
+#lbb{bottom:0;height:8.5vh;}
 
-/* ── TEXT POSITIONS ── */
-.st{position:absolute;z-index:20;padding:0 7vw;width:100%;}
-.st-bottom{bottom:16vh;}
-.st-center{top:50%;transform:translateY(-50%);}
-.st-top{top:16vh;}
+/* ── TEXT BLOCK ── */
+.text-block{
+  position:absolute;
+  bottom:14vh;
+  left:0;right:0;
+  padding:0 9vw;
+  z-index:20;
+}
 
 /* ── ANIMATED ELEMENTS ── */
-.anim-el{
-  opacity:0;transform:translateY(22px);
-  transition:opacity 1.6s cubic-bezier(0.4,0,0.2,1),transform 1.6s cubic-bezier(0.4,0,0.2,1);
+.ae{
+  opacity:0;transform:translateY(20px);
+  transition:opacity 1.4s cubic-bezier(0.4,0,0.2,1),
+             transform 1.4s cubic-bezier(0.4,0,0.2,1);
 }
-.anim-el.show{opacity:1;transform:none;}
+.ae.show{opacity:1;transform:none;}
 
-/* ── EYEBROW ── */
-.eyebrow{
-  font-family:var(--font);
-  font-size:clamp(10px,1vw,13px);font-weight:500;
-  text-transform:uppercase;letter-spacing:0.28em;
-  color:rgba(255,255,255,0.7);
-  margin-bottom:1.2rem;
+/* ── TOP LOGO ── */
+.logo-sm{
+  display:block;
+  height:40px;width:auto;
+  margin-bottom:3.5vh;
   transition-delay:0.1s !important;
-  text-shadow:0 1px 16px rgba(0,0,0,1),0 2px 40px rgba(0,0,0,0.9);
 }
 
-/* ── VO STYLES ── */
-.vo{
-  font-family:var(--font);
-  font-weight:300;color:#fff;
-  text-shadow:0 2px 30px rgba(0,0,0,0.95),0 1px 8px rgba(0,0,0,0.8);
+/* ── LABEL ── */
+.lbl{
+  font-family:"Inter",sans-serif;
+  font-size:clamp(11px,1.1vw,14px);
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0.22em;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:2.2vh;
+  transition-delay:0.1s !important;
+  text-shadow:0 1px 12px rgba(0,0,0,1);
 }
-.v-hero{font-size:clamp(44px,8.5vw,115px);line-height:1.0;letter-spacing:-0.02em;transition-delay:0.35s !important;}
-.v-hero.v-italic{font-style:italic;font-weight:300;}
-.v-large{font-size:clamp(28px,4.8vw,68px);line-height:1.1;transition-delay:0.35s !important;}
-.v-medium{font-size:clamp(20px,3vw,44px);line-height:1.25;transition-delay:0.35s !important;}
-.v-quote{font-size:clamp(20px,2.8vw,40px);line-height:1.5;font-style:italic;font-weight:300;transition-delay:0.35s !important;}
-.v-stacked{font-size:clamp(22px,3.5vw,50px);line-height:1.6;font-weight:300;transition-delay:0.35s !important;}
-.v-sub{
-  font-size:clamp(14px,1.7vw,22px);
-  font-style:italic;font-weight:300;
-  color:rgba(255,255,255,0.88);
-  margin-top:1.2rem;
+
+/* ── TITLE — matches Canva serif style ── */
+.title{
+  font-family:"Libre Baskerville","Georgia",serif;
+  font-size:clamp(32px,5.2vw,78px);
+  font-weight:400;
+  line-height:1.18;
+  color:#fff;
+  letter-spacing:-0.01em;
+  transition-delay:0.25s !important;
+  text-shadow:0 2px 40px rgba(0,0,0,0.95),0 1px 8px rgba(0,0,0,0.8);
+}
+
+/* ── DIVIDER ── */
+.divider{
+  width:100%;height:1px;
+  background:rgba(255,255,255,0.28);
+  margin:2.8vh 0;
+  transition-delay:0.55s !important;
+  transform:scaleX(0) !important;
+  transform-origin:left;
+  transition:opacity 0.8s ease 0.55s, transform 0.8s ease 0.55s !important;
+}
+.divider.show{transform:scaleX(1) !important;opacity:1 !important;}
+
+/* ── SUB ── */
+.sub{
+  font-family:"Inter",sans-serif;
+  font-size:clamp(14px,1.6vw,22px);
+  font-weight:300;
+  color:rgba(255,255,255,0.78);
+  line-height:1.6;
+  letter-spacing:0.01em;
+  transition-delay:0.75s !important;
   text-shadow:0 1px 20px rgba(0,0,0,1),0 2px 40px rgba(0,0,0,0.9);
-  transition-delay:0.85s !important;
 }
 
 /* ── LOGO SCENE ── */
-.film-logo{
-  width:clamp(160px,20vw,260px);
-  display:block;margin:0 auto 2rem;
+.logo-scene{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  z-index:20;
+  padding:0 8vw;
+  text-align:center;
+}
+.logo-big{
+  width:clamp(180px,22vw,300px);
+  margin-bottom:3.5vh;
   transition-delay:0.3s !important;
 }
-.orn-tagline{
-  font-family:var(--font);font-style:italic;font-weight:300;
-  font-size:clamp(15px,1.8vw,26px);
-  color:rgba(255,255,255,0.55);text-align:center;
-  transition-delay:1.1s !important;
-  text-shadow:0 1px 12px rgba(0,0,0,0.8);
+.logo-tag{
+  font-family:"Libre Baskerville","Georgia",serif;
+  font-size:clamp(18px,2.2vw,32px);
+  font-weight:400;
+  font-style:italic;
+  color:rgba(255,255,255,0.6);
+  transition-delay:1s !important;
 }
 
 /* ── PHOTO CREDIT ── */
-.photo-credit{
-  position:absolute;bottom:10vh;right:1.5vw;
-  font-family:var(--font);font-size:9px;font-weight:300;
-  color:rgba(255,255,255,0.25);letter-spacing:0.06em;
+.credit{
+  position:absolute;bottom:9.5vh;right:1.5vw;
+  font-family:"Inter",sans-serif;font-size:9px;font-weight:300;
+  color:rgba(255,255,255,0.22);letter-spacing:0.06em;
   z-index:30;pointer-events:none;
-  text-shadow:0 1px 6px rgba(0,0,0,0.9);
+  text-shadow:0 1px 6px rgba(0,0,0,1);
 }
 
 /* ── GRAIN ── */
 #grain{
-  position:fixed;inset:0;z-index:45;pointer-events:none;opacity:0.028;
+  position:fixed;inset:0;z-index:45;pointer-events:none;opacity:0.025;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size:200px 200px;
 }
 
 /* ── DOTS ── */
 #dots{
-  position:fixed;bottom:11.5vh;left:50%;transform:translateX(-50%);
+  position:fixed;bottom:11vh;left:50%;transform:translateX(-50%);
   display:flex;gap:8px;z-index:200;
 }
 .dot{
   width:5px;height:5px;border-radius:50%;
-  background:rgba(255,255,255,0.22);cursor:pointer;
-  transition:all 0.3s;border:none;padding:0;
+  background:rgba(255,255,255,0.22);
+  cursor:pointer;transition:all 0.3s;border:none;padding:0;
 }
-.dot.active{background:var(--green);transform:scale(1.5);}
+.dot.on{background:#3aaa35;transform:scale(1.5);}
+
+/* ── NAV LOGO (top left after scene 0) ── */
+#navlogo{
+  position:fixed;top:9.5vh;left:2.5vw;z-index:200;
+  opacity:0;transition:opacity 0.8s;
+}
+#navlogo.vis{opacity:1;}
+#navlogo img{height:30px;width:auto;}
+
+/* ── COUNTER ── */
+#ctr{
+  position:fixed;top:9.5vh;right:2.5vw;z-index:200;
+  font-family:"Inter",sans-serif;font-size:10px;font-weight:400;
+  color:rgba(255,255,255,0.28);letter-spacing:0.14em;
+}
 
 /* ── CONTROLS ── */
-#controls{
-  position:fixed;right:2rem;bottom:12.5vh;
+#ctrl{
+  position:fixed;right:2rem;bottom:12vh;
   display:flex;gap:0.5rem;z-index:200;
   opacity:0;transition:opacity 0.3s;
 }
-body:hover #controls,#controls:hover{opacity:1;}
+body:hover #ctrl,#ctrl:hover{opacity:1;}
 .cbtn{
-  width:38px;height:38px;border-radius:50%;
-  background:rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.2);
-  color:rgba(255,255,255,0.75);font-size:14px;cursor:pointer;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.7);font-size:13px;cursor:pointer;
   display:flex;align-items:center;justify-content:center;
-  backdrop-filter:blur(10px);transition:all 0.2s;font-family:var(--font);
+  backdrop-filter:blur(10px);transition:all 0.2s;
 }
-.cbtn:hover{background:rgba(0,0,0,0.85);color:#fff;border-color:rgba(255,255,255,0.5);}
-
-/* ── COUNTER ── */
-#counter{
-  position:fixed;top:10.5vh;right:2vw;z-index:200;
-  font-family:var(--font);font-size:10px;font-weight:400;
-  color:rgba(255,255,255,0.3);letter-spacing:0.12em;
-}
-
-/* ── TOP LOGO ── */
-#topleft{
-  position:fixed;top:10vh;left:2vw;z-index:200;
-  opacity:0;transition:opacity 0.8s;
-}
-#topleft.vis{opacity:1;}
-#topleft img{height:32px;width:auto;}
+.cbtn:hover{background:rgba(0,0,0,0.9);color:#fff;border-color:rgba(255,255,255,0.45);}
 
 /* ── REPLAY ── */
 #replay{
   position:fixed;inset:0;background:rgba(0,0,0,0.96);
   display:none;flex-direction:column;align-items:center;justify-content:center;
-  z-index:500;gap:2rem;
+  z-index:500;gap:2.5rem;
 }
 #replay.vis{display:flex;}
-#replay img{width:180px;}
+#replay img{width:200px;}
 #replay-tag{
-  font-family:var(--font);font-style:italic;font-weight:300;
-  font-size:clamp(16px,2.5vw,28px);
+  font-family:"Libre Baskerville",serif;font-style:italic;
+  font-size:clamp(18px,2.5vw,30px);
   color:rgba(255,255,255,0.5);
 }
-#replay-btn{
-  font-family:var(--font);font-size:11px;font-weight:500;
-  text-transform:uppercase;letter-spacing:0.2em;
+#rbtn{
+  font-family:"Inter",sans-serif;font-size:11px;font-weight:500;
+  text-transform:uppercase;letter-spacing:0.22em;
   color:rgba(255,255,255,0.5);background:none;
-  border:1px solid rgba(255,255,255,0.2);
-  padding:12px 30px;border-radius:2px;cursor:pointer;
-  transition:all 0.2s;
+  border:1px solid rgba(255,255,255,0.22);
+  padding:12px 32px;border-radius:2px;cursor:pointer;transition:all 0.2s;
 }
-#replay-btn:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
-#open-hub{
-  font-family:var(--font);font-size:11px;font-weight:400;
-  text-transform:uppercase;letter-spacing:0.16em;
-  color:var(--green);background:none;
+#rbtn:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
+#ohub{
+  font-family:"Inter",sans-serif;font-size:11px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:#3aaa35;background:none;
   border:1px solid rgba(58,170,53,0.35);
-  padding:10px 26px;border-radius:2px;cursor:pointer;
-  transition:all 0.2s;
+  padding:10px 28px;border-radius:2px;cursor:pointer;transition:all 0.2s;
 }
-#open-hub:hover{border-color:var(--green);background:rgba(58,170,53,0.05);}
+#ohub:hover{border-color:#3aaa35;}
 </style>
 </head>
 <body>
 
-<div id="lb-top"></div>
-<div id="lb-bot"></div>
+<div id="lbt"></div>
+<div id="lbb"></div>
 <div id="grain"></div>
 
 <div id="film" onclick="advance()">
-<div class="scene active" id="s0"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.38) 50%,rgba(0,0,0,0.6) 100%);"></div><div class="st st-center"><div class="anim-el vo v-hero v-italic" id="el-s0-0">There was a time<br>when travel<br>promised wonder.</div></div><div class="photo-credit">Benjamin Voros / Unsplash</div></div>
-<div class="scene " id="s1"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 55%,rgba(0,0,0,0.5) 100%);"></div><div class="st st-bottom"><div class="anim-el eyebrow" id="el-s1-0">The promise</div><div class="anim-el vo v-large" id="el-s1-1">What should have felt<br>expansive…</div><div class="anim-el vo v-sub" id="el-s1-2">began to feel assembled.</div></div><div class="photo-credit">Eva Darron / Unsplash</div></div>
-<div class="scene " id="s2"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.82));"></div><div class="st st-center"><div class="anim-el eyebrow" id="el-s2-0">Fragmentation</div><div class="anim-el vo v-stacked" id="el-s2-1">Too many tabs.<br>Too many decisions.<br>Too many disconnected handoffs.<br><br>Too much noise.</div></div><div class="photo-credit">Anete Lūsiņa / Unsplash</div></div>
-<div class="scene " id="s3"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.45) 100%);"></div><div class="st st-bottom"><div class="anim-el eyebrow" id="el-s3-0">The truth</div><div class="anim-el vo v-large" id="el-s3-1">People do not travel<br>for transactions.</div><div class="anim-el vo v-sub" id="el-s3-2">They travel for closeness, wonder, memory, and life.</div></div><div class="photo-credit">Sean O. / Unsplash</div></div>
-<div class="scene " id="s4"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.55) 100%);"></div><div class="st st-bottom"><div class="anim-el eyebrow" id="el-s4-0">For stillness</div><div class="anim-el vo v-quote" id="el-s4-1">“The true outcome of travel<br>is not the booking.<br>It is what remains.”</div></div><div class="photo-credit">Simon Migaj / Unsplash</div></div>
-<div class="scene " id="s5"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.4) 100%);"></div><div class="st st-bottom"><div class="anim-el eyebrow" id="el-s5-0">A new way</div><div class="anim-el vo v-large" id="el-s5-1">So we built<br>something different.</div></div><div class="photo-credit">Ales Krivec / Unsplash</div></div>
-<div class="scene " id="s6"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.6) 100%);"></div><div class="st st-bottom"><div class="anim-el eyebrow" id="el-s6-0">The system</div><div class="anim-el vo v-medium" id="el-s6-1">Discovery. Planning.<br>Delivery. Memory.</div><div class="anim-el vo v-sub" id="el-s6-2">One coherent system, designed around the human being.</div></div><div class="photo-credit">Luca Bravo / Unsplash</div></div>
-<div class="scene " id="s7"><div class="scene-bg logo-bg"></div>
-        <div class="st st-center" style="left:0;right:0;text-align:center;padding:0;">
-          <img class="anim-el film-logo" id="el-s7-0" src="orn-logo-white.png" alt="ORN">
-          <div class="anim-el orn-tagline" id="el-s7-1">Travel, made coherent.</div>
+<div class="scene active" id="s0"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.3) 40%,rgba(0,0,0,0.75) 100%);"></div><div class="text-block"><img class="ae logo-sm" id="s0-logo" src="orn-logo-white.png" alt="ORN"><div class="ae title" id="s0-title">There was a time when<br>travel promised wonder.</div><div class="ae divider" id="s0-div"></div><div class="ae sub" id="s0-sub">Then it became something people had to assemble.</div></div><div class="credit">Benjamin Voros / Unsplash</div></div>
+<div class="scene " id="s1"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.85) 100%);"></div><div class="text-block"><div class="ae lbl" id="s1-lbl">The fragmentation</div><div class="ae title" id="s1-title">Too many tabs.<br>Too many decisions.<br>Too many disconnected handoffs.</div><div class="ae divider" id="s1-div"></div><div class="ae sub" id="s1-sub">Too much noise.</div></div><div class="credit">Eva Darron / Unsplash</div></div>
+<div class="scene " id="s2"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.2) 35%,rgba(0,0,0,0.88) 100%);"></div><div class="text-block"><div class="ae lbl" id="s2-lbl">The truth</div><div class="ae title" id="s2-title">People do not travel<br>for transactions.</div><div class="ae divider" id="s2-div"></div><div class="ae sub" id="s2-sub">They travel for closeness, wonder, memory, and life.</div></div><div class="credit">Sean O. / Unsplash</div></div>
+<div class="scene " id="s3"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.88) 100%);"></div><div class="text-block"><div class="ae lbl" id="s3-lbl">For stillness</div><div class="ae title" id="s3-title">“The true outcome of travel<br>is not the booking.<br>It is what remains.”</div></div><div class="credit">Simon Migaj / Unsplash</div></div>
+<div class="scene " id="s4"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.2) 40%,rgba(0,0,0,0.85) 100%);"></div><div class="text-block"><div class="ae lbl" id="s4-lbl">A new way</div><div class="ae title" id="s4-title">So we built<br>something different.</div></div><div class="credit">Ales Krivec / Unsplash</div></div>
+<div class="scene " id="s5"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.3) 40%,rgba(0,0,0,0.9) 100%);"></div><div class="text-block"><div class="ae lbl" id="s5-lbl">The system</div><div class="ae title" id="s5-title">Discovery. Planning.<br>Delivery. Memory.</div><div class="ae divider" id="s5-div"></div><div class="ae sub" id="s5-sub">One coherent system, designed around the human being.</div></div><div class="credit">Luca Bravo / Unsplash</div></div>
+<div class="scene " id="s6"><div class="sbg" style="background:#000;"></div>
+        <div class="logo-scene">
+          <img class="ae logo-big" id="s6-0" src="orn-logo-white.png" alt="ORN">
+          <div class="ae logo-tag" id="s6-1">Travel, made coherent.</div>
         </div></div>
-<div class="scene " id="s8"><div class="scene-bg" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&fit=crop');"></div><div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.28) 45%,rgba(0,0,0,0.5) 100%);"></div><div class="st st-bottom"><div class="anim-el eyebrow" id="el-s8-0">The standard</div><div class="anim-el vo v-hero" id="el-s8-1">Not just<br>where you go.</div><div class="anim-el vo v-sub" id="el-s8-2">How it all holds together.</div></div><div class="photo-credit">Kalen Emsley / Unsplash</div></div>
+<div class="scene " id="s7"><div class="sbg" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&fit=crop');"></div><div class="sov" style="background:linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.25) 40%,rgba(0,0,0,0.88) 100%);"></div><div class="text-block"><div class="ae lbl" id="s7-lbl">The standard</div><div class="ae title" id="s7-title">Not just where you go.</div><div class="ae divider" id="s7-div"></div><div class="ae sub" id="s7-sub">How it all holds together.</div></div><div class="credit">Kalen Emsley / Unsplash</div></div>
 </div>
 
-<div id="topleft">
-  <img src="orn-logo-white.png" alt="ORN">
-</div>
-
-<div id="counter">01 / 09</div>
-<div id="dots"><button class="dot active" onclick="goTo(0,event)"></button>
+<div id="navlogo"><img src="orn-logo-white.png" alt="ORN"></div>
+<div id="ctr">01 / 08</div>
+<div id="dots"><button class="dot on" onclick="goTo(0,event)"></button>
 <button class="dot " onclick="goTo(1,event)"></button>
 <button class="dot " onclick="goTo(2,event)"></button>
 <button class="dot " onclick="goTo(3,event)"></button>
 <button class="dot " onclick="goTo(4,event)"></button>
 <button class="dot " onclick="goTo(5,event)"></button>
 <button class="dot " onclick="goTo(6,event)"></button>
-<button class="dot " onclick="goTo(7,event)"></button>
-<button class="dot " onclick="goTo(8,event)"></button></div>
+<button class="dot " onclick="goTo(7,event)"></button></div>
 
-<div id="controls">
+<div id="ctrl">
   <button class="cbtn" onclick="prev(event)">&#8592;</button>
-  <button class="cbtn" id="playbtn" onclick="togglePlay(event)">&#9646;&#9646;</button>
+  <button class="cbtn" id="pbtn" onclick="togglePlay(event)">&#9646;&#9646;</button>
   <button class="cbtn" onclick="advance()">&#8594;</button>
 </div>
 
 <div id="replay">
   <img src="orn-logo-white.png" alt="ORN">
   <div id="replay-tag">Travel, made coherent.</div>
-  <button id="replay-btn" onclick="restart()">&#9654;&nbsp; Play again</button>
-  <button id="open-hub" onclick="window.open('ORN_Brand_Hub.html','_blank')">Open brand hub &nbsp;&#8594;</button>
+  <button id="rbtn" onclick="restart()">&#9654;&nbsp; Play again</button>
+  <button id="ohub" onclick="window.open('ORN_Brand_Hub.html','_blank')">Open brand hub &nbsp;&#8594;</button>
 </div>
 
 <script>
-const SCENES = [{dur:6000},{dur:7000},{dur:7000},{dur:8000},{dur:8000},{dur:7000},{dur:8000},{dur:9000},{dur:10000}];
-const EL_IDS = [["el-s0-0"],["el-s1-0","el-s1-1","el-s1-2"],["el-s2-0","el-s2-1"],["el-s3-0","el-s3-1","el-s3-2"],["el-s4-0","el-s4-1"],["el-s5-0","el-s5-1"],["el-s6-0","el-s6-1","el-s6-2"],["el-s7-0","el-s7-1","el-s7-2","el-s7-3"],["el-s8-0","el-s8-1","el-s8-2"]];
-let cur=0, playing=true, elapsed=0, lastTick=null, raf=null;
+const SC=[{dur:7000},{dur:7000},{dur:7500},{dur:8000},{dur:7000},{dur:8000},{dur:9000},{dur:10000}];
+const IDS=[["s0-logo","s0-title","s0-div","s0-sub"],["s1-lbl","s1-title","s1-div","s1-sub"],["s2-lbl","s2-title","s2-div","s2-sub"],["s3-lbl","s3-title"],["s4-lbl","s4-title"],["s5-lbl","s5-title","s5-div","s5-sub"],["s6-0","s6-1"],["s7-lbl","s7-title","s7-div","s7-sub"]];
+let cur=0,play=true,elapsed=0,last=null,raf=null;
 
-function showScene(i){
-  document.querySelectorAll('.scene').forEach((s,idx)=>{
-    s.classList.toggle('active',idx===i);
-    EL_IDS[idx].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.remove('show');});
+function show(i){
+  document.querySelectorAll('.scene').forEach((s,x)=>{
+    s.classList.toggle('active',x===i);
+    IDS[x].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.remove('show');});
   });
-  document.querySelectorAll('.dot').forEach((d,idx)=>d.classList.toggle('active',idx===i));
-  document.getElementById('counter').textContent=String(i+1).padStart(2,'0')+' / '+String(SCENES.length).padStart(2,'0');
-  elapsed=0; lastTick=null;
-  if(i>0) document.getElementById('topleft').classList.add('vis');
-  setTimeout(()=>EL_IDS[i].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.add('show');}), 450);
+  document.querySelectorAll('.dot').forEach((d,x)=>d.classList.toggle('on',x===i));
+  document.getElementById('ctr').textContent=String(i+1).padStart(2,'0')+' / '+String(SC.length).padStart(2,'0');
+  elapsed=0;last=null;
+  if(i>0)document.getElementById('navlogo').classList.add('vis');
+  else document.getElementById('navlogo').classList.remove('vis');
+  setTimeout(()=>IDS[i].forEach(id=>{const e=document.getElementById(id);if(e)e.classList.add('show');}),400);
 }
 
 function tick(ts){
-  if(!playing)return;
-  if(!lastTick)lastTick=ts;
-  elapsed+=(ts-lastTick); lastTick=ts;
-  if(elapsed>=SCENES[cur].dur){
-    if(cur<SCENES.length-1){cur++;showScene(cur);}
-    else{document.getElementById('replay').classList.add('vis');playing=false;return;}
+  if(!play)return;
+  if(!last)last=ts;
+  elapsed+=(ts-last);last=ts;
+  if(elapsed>=SC[cur].dur){
+    if(cur<SC.length-1){cur++;show(cur);}
+    else{document.getElementById('replay').classList.add('vis');play=false;return;}
   }
   raf=requestAnimationFrame(tick);
 }
 
-function advance(){
-  if(cur<SCENES.length-1){cur++;showScene(cur);}
-  else document.getElementById('replay').classList.add('vis');
-}
-function prev(e){e&&e.stopPropagation();if(cur>0){cur--;showScene(cur);}}
-function goTo(i,e){
-  e&&e.stopPropagation();cur=i;showScene(cur);
-  if(!playing){playing=true;document.getElementById('playbtn').innerHTML='&#9646;&#9646;';raf=requestAnimationFrame(tick);}
-}
-function togglePlay(e){
-  e&&e.stopPropagation();playing=!playing;
-  document.getElementById('playbtn').innerHTML=playing?'&#9646;&#9646;':'&#9654;';
-  if(playing){lastTick=null;raf=requestAnimationFrame(tick);}
-}
-function restart(){
-  document.getElementById('replay').classList.remove('vis');
-  cur=0;playing=true;
-  document.getElementById('playbtn').innerHTML='&#9646;&#9646;';
-  showScene(0);lastTick=null;raf=requestAnimationFrame(tick);
-}
+function advance(){if(cur<SC.length-1){cur++;show(cur);}else document.getElementById('replay').classList.add('vis');}
+function prev(e){e&&e.stopPropagation();if(cur>0){cur--;show(cur);}}
+function goTo(i,e){e&&e.stopPropagation();cur=i;show(i);if(!play){play=true;document.getElementById('pbtn').innerHTML='&#9646;&#9646;';raf=requestAnimationFrame(tick);}}
+function togglePlay(e){e&&e.stopPropagation();play=!play;document.getElementById('pbtn').innerHTML=play?'&#9646;&#9646;':'&#9654;';if(play){last=null;raf=requestAnimationFrame(tick);}}
+function restart(){document.getElementById('replay').classList.remove('vis');cur=0;play=true;document.getElementById('pbtn').innerHTML='&#9646;&#9646;';show(0);last=null;raf=requestAnimationFrame(tick);}
 
-showScene(0);
-raf=requestAnimationFrame(tick);
+show(0);raf=requestAnimationFrame(tick);
 
 document.addEventListener('keydown',e=>{
-  if(e.code==='Space'||e.code==='ArrowRight') advance();
-  else if(e.code==='ArrowLeft') prev(null);
-  else if(e.key.toLowerCase()==='p') togglePlay(null);
+  if(e.code==='Space'||e.code==='ArrowRight')advance();
+  else if(e.code==='ArrowLeft')prev(null);
+  else if(e.key.toLowerCase()==='p')togglePlay(null);
 });
 
 setInterval(()=>{
-  if(cur+1<SCENES.length){
-    const nb=document.querySelectorAll('.scene')[cur+1].querySelector('.scene-bg');
-    if(nb){const u=nb.style.backgroundImage.replace(/url\(['"]?(.+?)['"]?\)/,'$1');if(u){new Image().src=u;}}
+  if(cur+1<SC.length){
+    const nb=document.querySelectorAll('.scene')[cur+1].querySelector('.sbg');
+    if(nb){const u=nb.style.backgroundImage.replace(/url\(['"]?(.+?)['"]?\)/,'$1');if(u&&u!='')new Image().src=u;}
   }
-},3000);
+},2500);
 </script>
 </body>
 </html>
