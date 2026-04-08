@@ -1191,3 +1191,22 @@ Travel, made coherent.</div>
     </div>
     <div class="lh-footer">
       <div cl
+      <div class="lh-footer-text">ORN Investor Narrative · 2025 · Strictly Confidential</div>
+      <div class="lh-footer-text">Not for distribution</div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+function showPanel(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tbtn').forEach(b=>b.classList.remove('on'));
+  const panel = document.getElementById('panel-'+id);
+  if(panel) panel.classList.add('on');
+  if(btn) btn.classList.add('on');
+  else { const first = document.querySelector('.tbtn'); if(first) first.classList.add('on'); }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</html>
