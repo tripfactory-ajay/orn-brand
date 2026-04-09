@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ORN — Travel, Made Coherent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;}
@@ -59,12 +59,12 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;
 
 /* ── LABEL ── */
 .lbl{
-  font-family:"Inter",sans-serif;
-  font-size:clamp(11px,1.1vw,14px);
+  font-family:"DM Mono",monospace;
+  font-size:clamp(9px,0.9vw,11px);
   font-weight:400;
   text-transform:uppercase;
-  letter-spacing:0.22em;
-  color:rgba(255,255,255,0.55);
+  letter-spacing:0.26em;
+  color:rgba(255,255,255,0.48);
   margin-bottom:2.2vh;
   transition-delay:0.1s !important;
   text-shadow:0 1px 12px rgba(0,0,0,1);
@@ -72,12 +72,12 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;
 
 /* ── TITLE — matches Canva serif style ── */
 .title{
-  font-family:"Libre Baskerville","Georgia",serif;
-  font-size:clamp(32px,5.2vw,78px);
-  font-weight:400;
-  line-height:1.18;
+  font-family:"Plus Jakarta Sans",sans-serif;
+  font-size:clamp(22px,3.2vw,48px);
+  font-weight:600;
+  line-height:1.15;
   color:#fff;
-  letter-spacing:-0.01em;
+  letter-spacing:-0.02em;
   transition-delay:0.25s !important;
   text-shadow:0 2px 40px rgba(0,0,0,0.95),0 1px 8px rgba(0,0,0,0.8);
 }
@@ -96,11 +96,11 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;
 
 /* ── SUB ── */
 .sub{
-  font-family:"Inter",sans-serif;
-  font-size:clamp(14px,1.6vw,22px);
+  font-family:"Plus Jakarta Sans",sans-serif;
+  font-size:clamp(13px,1.3vw,18px);
   font-weight:300;
-  color:rgba(255,255,255,0.78);
-  line-height:1.6;
+  color:rgba(255,255,255,0.72);
+  line-height:1.7;
   letter-spacing:0.01em;
   transition-delay:0.75s !important;
   text-shadow:0 1px 20px rgba(0,0,0,1),0 2px 40px rgba(0,0,0,0.9);
@@ -121,18 +121,19 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;
   transition-delay:0.3s !important;
 }
 .logo-tag{
-  font-family:"Libre Baskerville","Georgia",serif;
-  font-size:clamp(18px,2.2vw,32px);
-  font-weight:400;
-  font-style:italic;
-  color:rgba(255,255,255,0.6);
+  font-family:"Plus Jakarta Sans",sans-serif;
+  font-size:clamp(14px,1.6vw,22px);
+  font-weight:300;
+  font-style:normal;
+  color:rgba(255,255,255,0.55);
+  letter-spacing:0.04em;
   transition-delay:1s !important;
 }
 
 /* ── PHOTO CREDIT ── */
 .credit{
   position:absolute;bottom:9.5vh;right:1.5vw;
-  font-family:"Inter",sans-serif;font-size:9px;font-weight:300;
+  font-family:"DM Mono",monospace;font-size:9px;font-weight:300;
   color:rgba(255,255,255,0.22);letter-spacing:0.06em;
   z-index:30;pointer-events:none;
   text-shadow:0 1px 6px rgba(0,0,0,1);
@@ -168,7 +169,7 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;cursor:pointer;
 /* ── COUNTER ── */
 #ctr{
   position:fixed;top:9.5vh;right:2.5vw;z-index:200;
-  font-family:"Inter",sans-serif;font-size:10px;font-weight:400;
+  font-family:"DM Mono",monospace;font-size:10px;font-weight:300;
   color:rgba(255,255,255,0.28);letter-spacing:0.14em;
 }
 
@@ -197,12 +198,12 @@ body:hover #ctrl,#ctrl:hover{opacity:1;}
 #replay.vis{display:flex;}
 #replay img{width:200px;}
 #replay-tag{
-  font-family:"Libre Baskerville",serif;font-style:italic;
-  font-size:clamp(18px,2.5vw,30px);
+  font-family:"Plus Jakarta Sans",sans-serif;font-style:normal;
+  font-size:clamp(14px,1.8vw,22px);font-weight:300;
   color:rgba(255,255,255,0.5);
 }
 #rbtn{
-  font-family:"Inter",sans-serif;font-size:11px;font-weight:500;
+  font-family:"Plus Jakarta Sans",sans-serif;font-size:11px;font-weight:500;
   text-transform:uppercase;letter-spacing:0.22em;
   color:rgba(255,255,255,0.5);background:none;
   border:1px solid rgba(255,255,255,0.22);
@@ -210,7 +211,7 @@ body:hover #ctrl,#ctrl:hover{opacity:1;}
 }
 #rbtn:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
 #ohub{
-  font-family:"Inter",sans-serif;font-size:11px;font-weight:400;
+  font-family:"Plus Jakarta Sans",sans-serif;font-size:11px;font-weight:400;
   text-transform:uppercase;letter-spacing:0.18em;
   color:#3aaa35;background:none;
   border:1px solid rgba(58,170,53,0.35);
