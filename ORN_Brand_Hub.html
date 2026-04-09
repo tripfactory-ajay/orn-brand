@@ -375,47 +375,6 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
 /* ══════════════════════════════════════
    LETTERHEAD / OUTREACH CONTENT
 ══════════════════════════════════════ */
-.lh-wrap{max-width:760px;margin:0 auto;padding:4rem 5rem;}
-.lh-header{
-  padding:3rem 5rem;border-bottom:1px solid var(--border);
-  display:flex;align-items:center;gap:2rem;
-  background:linear-gradient(135deg,rgba(30,58,95,0.05) 0%,transparent 60%);
-}
-.lh-header img{height:34px;opacity:0.55;}
-.lh-h{font-family:var(--sans);font-weight:600;font-size:clamp(24px,3.5vw,40px);color:#fff;font-weight:400;margin-bottom:1.25rem;line-height:1.15;}
-.lh-p{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.95;font-weight:300;margin-bottom:1.5rem;}
-.lh-sig{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);}
-.lh-sig-name{font-family:var(--sans);font-weight:600;font-size:24px;color:#fff;}
-.lh-sig-role{font-size:12px;color:var(--text3);margin-top:5px;letter-spacing:0.02em;}
-.lh-footer{
-  padding:2rem 5rem;border-top:1px solid var(--border);
-  display:flex;justify-content:space-between;align-items:center;
-}
-.lh-footer-text{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:0.12em;text-transform:uppercase;}
-
-.pr-wrap{max-width:760px;margin:0 auto;padding:4rem 5rem;}
-.pr-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:var(--green);margin-bottom:0.6rem;}
-.pr-h{font-family:var(--sans);font-weight:600;font-size:clamp(22px,3vw,36px);color:#fff;font-weight:400;margin-bottom:1.75rem;line-height:1.2;}
-.pr-date{font-size:12px;color:var(--text3);margin-bottom:2.5rem;letter-spacing:0.04em;}
-.pr-p{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.95;font-weight:300;margin-bottom:1.5rem;}
-
-.qa-item{padding:2.5rem 0;border-bottom:1px solid var(--border);}
-.qa-q{font-family:var(--sans);font-size:16px;font-weight:600;color:#fff;margin-bottom:1.25rem;line-height:1.35;display:flex;gap:1.25rem;}
-.qa-q-mark{color:var(--green);font-family:var(--mono);flex-shrink:0;font-size:14px;margin-top:3px;}
-.qa-a{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.9;font-weight:300;padding-left:2.5rem;}
-
-.li-post{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:2.25rem;margin-bottom:1.5rem;}
-.li-post-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:var(--green);margin-bottom:1.1rem;}
-.li-post-body{font-size:14px;color:rgba(255,255,255,0.82);line-height:1.9;font-weight:300;white-space:pre-line;}
-
-.body-wrap,.body-wrap.wide,.body-wrap.narrow{padding:3rem 5rem;}
-.body-h{font-family:var(--sans);font-weight:600;font-size:clamp(22px,3vw,34px);color:#fff;font-weight:400;margin-bottom:1.5rem;line-height:1.15;}
-.body-p{font-size:14px;color:rgba(255,255,255,0.8);line-height:1.95;font-weight:300;margin-bottom:1.5rem;}
-.label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:var(--green);margin-bottom:0.6rem;}
-.val{font-size:14px;color:var(--text2);line-height:1.75;font-weight:300;}
-.card,.card-sm{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:2rem;margin-bottom:1.25rem;}
-.card:hover,.card-sm:hover{border-color:rgba(255,255,255,0.14);}
-
 /* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
@@ -430,10 +389,7 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
   .del-track{grid-template-columns:1fr;gap:0.5rem;padding:1.5rem;}
   .del-6grid{grid-template-columns:1fr 1fr;}
   .ps,.del-s,.del-s-alt,.ph,.del-cover,
-  .body-wrap,.pr-wrap,.lh-wrap,.lh-header,.lh-footer{
-    padding-left:1.75rem;padding-right:1.75rem;
-  }
-  .topnav{padding:0 1.75rem;}
+  .body-wrap,.pr-wrap,.lh-wrap,.lh-header,.topnav{padding:0 1.75rem;}
   .tbtn{padding:0 1.25rem;font-size:12px;}
 }
 
@@ -585,6 +541,290 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
   .bc-slide,.bc-slide-alt,.bc-cover{padding-left:1.75rem;padding-right:1.75rem;}
 }
 
+
+/* ══════════════════════════════════════
+   OUTREACH — UNIFIED CLEAN STYLES
+══════════════════════════════════════ */
+
+/* Letterhead wrapper */
+.or-doc{
+  max-width:800px;margin:0 auto;
+  padding:4rem 5rem 5rem;
+}
+
+/* Letterhead header row */
+.lh-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding-bottom:1.5rem;
+  border-bottom:1px solid var(--border);
+  margin-bottom:2.5rem;
+}
+.lh-logo img{height:32px;width:auto;display:block;}
+.lh-meta{text-align:right;}
+.lh-meta-row{
+  font-family:var(--mono);font-size:10px;font-weight:300;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);line-height:1.9;
+}
+
+/* Colour bar */
+.lh-bars{
+  display:flex;height:2px;margin-bottom:2.5rem;
+  border-radius:1px;overflow:hidden;
+}
+.lh-bars span{flex:1;}
+
+/* To / Subject area */
+.lh-to{
+  font-family:var(--mono);font-size:10px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--green);margin-bottom:0.3rem;
+}
+.lh-recipient{
+  font-size:18px;font-weight:600;color:#fff;margin-bottom:1.25rem;
+}
+.lh-subject{
+  font-size:22px;font-weight:600;color:#fff;line-height:1.2;margin-bottom:0.35rem;
+}
+.lh-subject-sub{
+  font-size:14px;font-weight:300;color:rgba(255,255,255,0.55);
+  margin-bottom:2.5rem;
+}
+
+/* Body paragraphs */
+.lh-body{margin-top:0;}
+.lh-p{
+  font-size:16px;font-weight:300;color:rgba(255,255,255,0.88);
+  line-height:1.9;margin-bottom:1.25rem;
+}
+.lh-quote{
+  font-size:19px;font-weight:400;color:rgba(255,255,255,0.72);
+  border-left:2px solid var(--green);
+  padding:1rem 1.5rem;margin:2rem 0;
+  background:rgba(58,170,53,0.04);border-radius:0 4px 4px 0;
+  line-height:1.55;
+}
+
+/* Signature */
+.lh-sig{
+  margin-top:2.5rem;padding-top:2rem;
+  border-top:1px solid var(--border);
+}
+.lh-sig-name{font-size:18px;font-weight:600;color:#fff;margin-bottom:4px;}
+.lh-sig-role{font-family:var(--mono);font-size:10px;font-weight:300;
+  text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.45);}
+
+/* Footer */
+.lh-footer{
+  margin-top:3rem;padding-top:1.5rem;
+  border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.lh-footer-text{
+  font-family:var(--mono);font-size:9px;font-weight:300;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(255,255,255,0.25);
+}
+
+/* ── PRESS RELEASE ── */
+.pr-label{
+  font-family:var(--mono);font-size:10px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.2em;
+  color:var(--green);margin-bottom:0.4rem;
+}
+.pr-h{
+  font-size:clamp(20px,2.5vw,30px);font-weight:600;
+  color:#fff;line-height:1.2;margin-bottom:0.5rem;
+}
+.pr-date{
+  font-family:var(--mono);font-size:10px;font-weight:300;
+  letter-spacing:0.12em;color:rgba(255,255,255,0.4);
+  margin-bottom:2rem;text-transform:uppercase;
+}
+.pr-p{
+  font-size:16px;font-weight:300;color:rgba(255,255,255,0.88);
+  line-height:1.9;margin-bottom:1.25rem;
+}
+
+/* ── MEDIA Q&A ── */
+.qa-item{
+  padding:2rem 0;border-bottom:1px solid var(--border);
+}
+.qa-item:last-child{border-bottom:none;}
+.qa-q{
+  font-size:17px;font-weight:600;color:#fff;
+  margin-bottom:1rem;line-height:1.35;
+  display:flex;gap:1rem;align-items:flex-start;
+}
+.qa-q-mark{
+  font-family:var(--mono);font-size:11px;
+  color:var(--green);flex-shrink:0;margin-top:3px;
+  font-weight:400;
+}
+.qa-a{
+  font-size:16px;font-weight:300;color:rgba(255,255,255,0.85);
+  line-height:1.85;padding-left:1.75rem;
+}
+
+/* ── LINKEDIN POSTS ── */
+.li-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:2rem 2.25rem;margin-bottom:1.25rem;
+}
+.li-card-head{
+  display:flex;align-items:center;gap:0.85rem;
+  margin-bottom:1.25rem;padding-bottom:1.25rem;
+  border-bottom:1px solid var(--border);
+}
+.li-avatar img{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--border);
+}
+.li-name{font-size:14px;font-weight:600;color:#fff;}
+.li-role{font-size:12px;font-weight:300;color:rgba(255,255,255,0.45);}
+.li-num{
+  font-family:var(--mono);font-size:9px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:var(--green);margin-bottom:0.75rem;
+}
+.li-body{
+  font-size:16px;font-weight:300;color:rgba(255,255,255,0.88);
+  line-height:1.85;white-space:pre-line;
+}
+.li-actions{
+  margin-top:1.25rem;padding-top:1rem;
+  border-top:1px solid var(--border);
+  display:flex;gap:1.5rem;
+}
+.li-action{
+  font-family:var(--mono);font-size:9px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.28);
+}
+
+/* ── EMAIL SEQUENCE ── */
+.email-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;margin-bottom:1.25rem;overflow:hidden;
+}
+.email-head{
+  padding:1.25rem 2rem;
+  border-bottom:1px solid var(--border);
+  background:rgba(255,255,255,0.02);
+}
+.email-subj{font-size:13px;font-weight:600;color:#fff;margin-bottom:4px;}
+.email-from{
+  font-family:var(--mono);font-size:9px;font-weight:300;
+  text-transform:uppercase;letter-spacing:0.14em;
+  color:rgba(255,255,255,0.35);
+}
+.email-body-wrap{padding:1.75rem 2rem;}
+.email-p{
+  font-size:15px;font-weight:300;color:rgba(255,255,255,0.85);
+  line-height:1.85;margin-bottom:1rem;
+}
+.email-cta-btn{
+  display:inline-block;margin-top:0.5rem;
+  font-family:var(--mono);font-size:10px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--green);
+  border:1px solid rgba(58,170,53,0.35);
+  padding:0.75rem 1.5rem;border-radius:2px;
+}
+
+/* ── PARTNER / INVESTOR — std sections ── */
+.std-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;
+  margin-bottom:2rem;
+}
+.std-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:1.75rem 2rem;
+}
+.std-dot{
+  width:28px;height:3px;background:var(--green);
+  border-radius:2px;margin-bottom:1rem;
+}
+.std-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:0.5rem;}
+.std-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,0.85);line-height:1.8;}
+
+/* Investor metrics */
+.inv-metrics{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--border);border-radius:4px;overflow:hidden;
+  margin:2rem 0;
+}
+.inv-met{background:#000;padding:1.75rem 1.5rem;}
+.inv-met-lbl{
+  font-family:var(--mono);font-size:9px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.18em;
+  color:rgba(255,255,255,0.45);margin-bottom:0.5rem;
+}
+.inv-met-val{font-size:22px;font-weight:600;color:#fff;}
+
+/* ── PAGE HERO (LinkedIn/Email panels) ── */
+.page-hero{
+  padding:5rem 5rem 4rem;border-bottom:1px solid var(--border);
+  background:linear-gradient(135deg,rgba(58,170,53,0.04) 0%,transparent 45%);
+}
+.hero-eye{
+  font-family:var(--mono);font-size:10px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.24em;
+  color:var(--green);margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:0.75rem;
+}
+.hero-eye::before{content:"";width:20px;height:1px;background:var(--green);}
+.hero-h{
+  font-size:clamp(28px,4vw,52px);font-weight:600;
+  color:#fff;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1rem;
+}
+.hero-sub{
+  font-size:16px;font-weight:300;color:rgba(255,255,255,0.65);
+  max-width:560px;line-height:1.8;
+}
+.body-wrap{padding:4rem 5rem;}
+
+/* tag pill */
+.tag{
+  font-family:var(--mono);font-size:9px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.16em;
+  color:var(--green);background:rgba(58,170,53,0.1);
+  padding:4px 10px;border-radius:2px;display:inline-block;
+  margin-bottom:1.5rem;
+}
+
+/* Responsive */
+@media(max-width:960px){
+  .or-doc{padding:3rem 1.75rem;}
+  .std-grid{grid-template-columns:1fr;}
+  .inv-metrics{grid-template-columns:1fr 1fr;}
+  .page-hero,.body-wrap{padding-left:1.75rem;padding-right:1.75rem;}
+}
+
+
+/* Outreach compact tab header */
+.or-tab-header{
+  padding:2rem 5rem 0;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(135deg,rgba(58,170,53,0.03) 0%,transparent 40%);
+}
+.or-tab-label{
+  font-family:var(--mono);font-size:10px;font-weight:400;
+  text-transform:uppercase;letter-spacing:0.24em;
+  color:var(--green);margin-bottom:0.5rem;
+  display:flex;align-items:center;gap:0.75rem;
+}
+.or-tab-label::before{content:"";width:18px;height:1px;background:var(--green);}
+.or-tab-desc{
+  font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);
+  margin-bottom:1.5rem;max-width:600px;line-height:1.6;
+}
+.ps .subtab-row,.or-tab-header .subtab-row{
+  margin-bottom:0;
+}
+@media(max-width:960px){
+  .or-tab-header{padding-left:1.75rem;padding-right:1.75rem;}
+}
 </style>
 </head>
 <body>
@@ -1093,12 +1333,9 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
 
 </div>
 <div class="panel" id="panel-outreach">
-  <div class="ph">
-    <div class="ph-eye">Communications Suite</div>
-    <div class="ph-h">Everything written<br>in ORN's voice.</div>
-    <div class="ph-sub">Founder letter, press release, media Q&A, LinkedIn sequence, email sequence, partner and investor narratives — all authored from the same source logic.</div>
-  </div>
-  <div class="ps">
+  <div class="or-tab-header">
+    <div class="or-tab-label">Communications Suite</div>
+    <div class="or-tab-desc">Founder letter, press release, media Q&A, LinkedIn, email sequence, partner and investor narratives.</div>
     <div class="subtab-row">
       <button class="stbtn on" onclick="showSub('sub-founder',this)">Founder Letter</button>
       <button class="stbtn" onclick="showSub('sub-press',this)">Press Release</button>
@@ -1109,7 +1346,7 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
       <button class="stbtn" onclick="showSub('sub-investor',this)">Investor</button>
     </div>
   </div>
-  <div id="sub-founder" class="subpanel on"><div class="letterhead" style="margin:3rem auto;max-width:800px;">
+  <div id="sub-founder" class="subpanel on"><div class="or-doc">
     <div class="lh-header">
       <div class="lh-logo"><img src="orn-logo.png" alt="ORN"></div>
       <div class="lh-meta">
@@ -1148,7 +1385,7 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
       <div class="lh-footer-text">orn.com</div>
     </div>
   </div></div>
-  <div id="sub-press" class="subpanel"><div class="letterhead" style="margin:3rem auto;max-width:860px;">
+  <div id="sub-press" class="subpanel"><div class="or-doc">
     <div class="lh-header">
       <div class="lh-logo"><img src="orn-logo.png" alt="ORN"></div>
       <div class="lh-meta">
@@ -1193,7 +1430,7 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
       <div class="lh-footer-text">Embargoed until release</div>
     </div>
   </div></div>
-  <div id="sub-qa" class="subpanel"><div class="letterhead" style="margin:3rem auto;max-width:860px;">
+  <div id="sub-qa" class="subpanel"><div class="or-doc">
     <div class="lh-header">
       <div class="lh-logo"><img src="orn-logo.png" alt="ORN"></div>
       <div class="lh-meta">
@@ -1228,12 +1465,7 @@ html,body{min-height:100vh;background:#000;color:var(--text);font-family:var(--s
       <div class="lh-footer-text">Not for distribution</div>
     </div>
   </div></div>
-  <div id="sub-linkedin" class="subpanel"><div class="page-hero">
-    <div class="hero-eye">Social — LinkedIn Launch Sequence</div>
-    <div class="hero-h" style="font-size:clamp(36px,5vw,64px);">6-Post Sequence</div>
-    <div class="hero-sub">Founder voice. Pre-launch to reveal. Each post builds the narrative arc from the brand document.</div>
-  </div>
-  <div class="body-wrap">
+  <div id="sub-linkedin" class="subpanel"><div class="body-wrap" style="padding-top:3rem;">
     <div class="li-card">
       <div class="li-card-head">
         <div class="li-avatar"><img src="orn-logo.png" alt="ORN"></div>
@@ -1355,12 +1587,7 @@ Travel, made coherent.</div>
       <div class="li-actions"><span class="li-action" style="color:var(--green);">The Launch</span><span class="li-action">Launch day</span></div>
     </div>
   </div></div>
-  <div id="sub-email" class="subpanel"><div class="page-hero">
-    <div class="hero-eye">Launch — Email Sequence</div>
-    <div class="hero-h" style="font-size:clamp(36px,5vw,64px);">4-Email<br>Sequence</div>
-    <div class="hero-sub">Introduction through invitation. Each email builds on the last, moving the reader from awareness to action.</div>
-  </div>
-  <div class="body-wrap">
+  <div id="sub-email" class="subpanel"><div class="body-wrap" style="padding-top:3rem;">
     <div class="email-card">
       <div class="email-head">
         <div class="email-subj">Introducing ORN</div>
@@ -1420,7 +1647,7 @@ Travel, made coherent.</div>
       </div>
     </div>
   </div></div>
-  <div id="sub-partner" class="subpanel"><div class="letterhead" style="margin:3rem auto;max-width:860px;">
+  <div id="sub-partner" class="subpanel"><div class="or-doc">
     <div class="lh-header">
       <div class="lh-logo"><img src="orn-logo.png" alt="ORN"></div>
       <div class="lh-meta">
@@ -1458,7 +1685,7 @@ Travel, made coherent.</div>
       <div class="lh-footer-text">Confidential</div>
     </div>
   </div></div>
-  <div id="sub-investor" class="subpanel"><div class="letterhead" style="margin:3rem auto;max-width:960px;">
+  <div id="sub-investor" class="subpanel"><div class="or-doc">
     <div class="lh-header">
       <div class="lh-logo"><img src="orn-logo.png" alt="ORN"></div>
       <div class="lh-meta">
