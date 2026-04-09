@@ -530,7 +530,7 @@ nav{
     <img src="orn-logo.png" alt="ORN">
   </a>
   <div class="nav-tabs">
-    <button class="tbtn on" onclick="showPanel('brand',this)">Brand Guide</button>
+    <button class="tbtn on" onclick="showPanel('brand',this)">Brand Delivery</button>
     <button class="tbtn" onclick="showPanel('website',this)">Website</button>
     <button class="tbtn" onclick="showPanel('about',this)">About ORN</button>
     <button class="tbtn" onclick="showPanel('founder',this)">Founder Letter</button>
@@ -547,173 +547,386 @@ nav{
   PANEL: BRAND GUIDE
 ═══════════════════════════════════════════════ -->
 <div class="panel on" id="panel-brand">
-  <div class="page-hero">
-    <div class="hero-eye">Brand Guide — Version 1.0 — Confidential</div>
-    <div class="hero-h">ORN</div>
-    <div class="hero-sub">The complete brand system — authored by Vinay, Architect, Poet, Operator.</div>
+
+  <!-- HERO -->
+  <div style="padding:6rem 5rem 4rem;border-bottom:1px solid var(--border);position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(58,170,53,0.05) 0%,transparent 40%),linear-gradient(225deg,rgba(30,58,95,0.08) 0%,transparent 50%);">
+    <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;"><span style="width:24px;height:1px;background:var(--green);display:inline-block;"></span>Internal Brand Doctrine · Leadership Cascade</div>
+    <div style="font-family:var(--serif);font-size:clamp(42px,6vw,78px);font-weight:300;color:#fff;line-height:0.95;letter-spacing:-0.02em;margin-bottom:1.5rem;">Brand is not<br>a slogan.<br><em style="color:rgba(255,255,255,0.45);">It is a promise system.</em></div>
+    <div style="font-size:15px;color:var(--text2);max-width:560px;line-height:1.8;font-weight:300;">A leadership cascade starting with you, carried by every department head. One voice. One standard. One ORN.</div>
+    <div style="margin-top:3rem;font-family:var(--serif);font-style:italic;font-size:18px;color:rgba(255,255,255,0.35);">"Brands are strong — as they are a promise of what to expect." — Vinay</div>
   </div>
-  <div class="bars" style="height:6px;"><span style="background:#1e3a5f"></span><span style="background:#1a6fb5"></span><span style="background:#00a0d6"></span><span style="background:#3aaa35"></span><span style="background:#f5c400"></span><span style="background:#d42b1e"></span></div>
 
-  <div class="body-wrap wide">
-
-    <!-- 01 ESSENCE -->
-    <div class="sec-label">01 — Brand Essence</div>
-    <div class="big-p">"ORN is an authored system built from a deeply held recognition that travel had become fragmented and emotionally unworthy of what it should be."</div>
-    <div class="body-p">Its purpose is to restore coherence by uniting emotion, movement, memory, and system design into one living architecture. ORN is not a product with features — it is a product with soul. And that soul comes from its origin.</div>
-    <div class="grid-2" style="margin-top:2rem;">
-      <div class="card"><div class="label">Source truth</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--text);line-height:1.5;">Travel became fragmented and emotionally diminished. ORN exists to make it coherent again.</div></div>
-      <div class="card"><div class="label">Compressed essence</div><div style="font-family:var(--serif);font-size:18px;font-weight:300;color:var(--text);line-height:1.5;">ORN makes travel coherent again.</div></div>
-    </div>
-    <div class="pull-quote" style="margin-top:2rem;">"ORN has soul because its origin did." — authored by conviction, not trend.</div>
-    <div class="divider"></div>
-
-    <!-- 02 COLOUR -->
-    <div class="sec-label">02 — Colour System</div>
-    <div class="body-p" style="margin-bottom:1.5rem;">The six logo bars define the full brand spectrum. Each colour carries meaning derived from the ORN journey — from depth (navy) through intelligence (blue, cyan) to coherence (green), memory (yellow), and energy (red). Green #3AAA35 is the primary brand accent.</div>
-    <div class="palette">
-      <div class="pal-cell"><div class="pal-chip" style="background:#1e3a5f;"></div><div class="pal-info"><div class="pal-name">Navy</div><div class="pal-hex">#1E3A5F</div><div class="pal-role">Depth & foundation</div></div></div>
-      <div class="pal-cell"><div class="pal-chip" style="background:#1a6fb5;"></div><div class="pal-info"><div class="pal-name">Blue</div><div class="pal-hex">#1A6FB5</div><div class="pal-role">Intelligence</div></div></div>
-      <div class="pal-cell"><div class="pal-chip" style="background:#00a0d6;"></div><div class="pal-info"><div class="pal-name">Cyan</div><div class="pal-hex">#00A0D6</div><div class="pal-role">Clarity</div></div></div>
-      <div class="pal-cell"><div class="pal-chip" style="background:#3aaa35;"></div><div class="pal-info"><div class="pal-name">Green</div><div class="pal-hex">#3AAA35</div><div class="pal-role">Coherence — primary</div></div></div>
-      <div class="pal-cell"><div class="pal-chip" style="background:#f5c400;"></div><div class="pal-info"><div class="pal-name">Yellow</div><div class="pal-hex">#F5C400</div><div class="pal-role">Memory & warmth</div></div></div>
-      <div class="pal-cell"><div class="pal-chip" style="background:#d42b1e;"></div><div class="pal-info"><div class="pal-name">Red</div><div class="pal-hex">#D42B1E</div><div class="pal-role">Energy & urgency</div></div></div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 03 PILLARS -->
-    <div class="sec-label">03 — Brand Pillars</div>
-    <div class="pillar-grid">
-      <div class="pillar"><span class="p-num">P.01</span><div class="p-name">Coherence</div><div class="p-desc">Turn fragmentation into wholeness at every layer of the journey</div></div>
-      <div class="pillar"><span class="p-num">P.02</span><div class="p-name">Care</div><div class="p-desc">Design with seriousness toward the traveler's lived experience</div></div>
-      <div class="pillar"><span class="p-num">P.03</span><div class="p-name">Composition</div><div class="p-desc">Compose journeys — never merely assemble them</div></div>
-      <div class="pillar"><span class="p-num">P.04</span><div class="p-name">Intelligence</div><div class="p-desc">Deep system logic that reduces burden and creates clarity</div></div>
-      <div class="pillar"><span class="p-num">P.05</span><div class="p-name">Memory</div><div class="p-desc">The true outcome of travel is what stays with a person</div></div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 04 TYPOGRAPHY -->
-    <div class="sec-label">04 — Typography</div>
-    <div class="body-p" style="margin-bottom:1.5rem;">The document calls for <strong style="color:#fff;">strong typography hierarchy</strong> with <strong style="color:#fff;">editorial spacing</strong>. Cormorant Garamond carries all brand voice — poetic, architectural, authoritative. DM Sans handles clarity and precision in UI and functional copy. DM Mono for structural labelling.</div>
-    <div class="type-rows">
-      <div class="type-row"><div><div class="tm-n">Display</div><div class="tm-s">Cormorant Garamond / 300 / 72px+</div></div><div style="font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;line-height:1;">Travel, made coherent.</div></div>
-      <div class="type-row"><div><div class="tm-n">Heading 1</div><div class="tm-s">Cormorant Garamond / 400 / 36px</div></div><div style="font-family:var(--serif);font-size:28px;font-weight:400;color:#fff;">One coherent system for the whole journey.</div></div>
-      <div class="type-row"><div><div class="tm-n">Heading 2</div><div class="tm-s">DM Sans / 500 / 18px</div></div><div style="font-size:18px;font-weight:500;color:#fff;">Less assembly. More alignment.</div></div>
-      <div class="type-row"><div><div class="tm-n">Body</div><div class="tm-s">DM Sans / 300 / 15px / 1.85 leading</div></div><div style="font-size:15px;font-weight:300;color:var(--text2);line-height:1.85;">ORN brings discovery, planning, delivery, and memory into one intelligent system — designed around how journeys should feel, not just where they should go.</div></div>
-      <div class="type-row"><div><div class="tm-n">Caption</div><div class="tm-s">DM Sans / 400 / 12px</div></div><div style="font-size:12px;color:var(--text3);">Because memory is the real product.</div></div>
-      <div class="type-row"><div><div class="tm-n">Eyebrow / Label</div><div class="tm-s">DM Mono / 400 / 10px / 0.18em spacing</div></div><div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);">Brand Foundation — Confidential</div></div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 05 VOICE -->
-    <div class="sec-label">05 — Voice & Tone</div>
-    <div class="card" style="margin-bottom:1rem;">
-      <div class="label">Core tone</div>
-      <div style="font-family:var(--serif);font-size:26px;color:#fff;margin-bottom:0.5rem;">Quiet authority.</div>
-      <div style="font-size:14px;color:var(--text2);font-weight:300;">Elegant, clear, thoughtful, emotionally intelligent. Never loud. Never performative. The document specifies a dark cinematic base with warm intelligent highlights — the voice must match the visual world.</div>
-    </div>
-    <div class="voice-grid">
-      <div class="vc vc-yes"><span class="vc-lbl">ORN sounds like</span>
-        <div class="vc-item">Clear and architecturally assured</div>
-        <div class="vc-item">Emotionally literate and precise</div>
-        <div class="vc-item">Refined, humane, conviction-led</div>
-        <div class="vc-item">Calm with deep authority beneath</div>
-        <div class="vc-item">Non-performative — meaning over decoration</div>
-        <div class="vc-item">Lightly poetic only where it sharpens meaning</div>
+  <!-- SECTION 01: WHAT BRAND IS -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">01 — The ORN Definition of Brand<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-bottom:3rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;border-top:2px solid var(--green);">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:1rem;">What brand is</div>
+        <div style="font-family:var(--serif);font-size:20px;color:#fff;margin-bottom:1rem;line-height:1.2;">A clear promise</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">A clear promise of values, purpose, consistency, and reliability.</div>
       </div>
-      <div class="vc vc-no"><span class="vc-lbl">ORN never sounds like</span>
-        <div class="vc-item">Loud, chaotic, or trend-driven</div>
-        <div class="vc-item">Startup-hyped or discount-first</div>
-        <div class="vc-item">Shallow luxury or generic premium</div>
-        <div class="vc-item">Over-spiritual or overwrought</div>
-        <div class="vc-item">Clever for its own sake</div>
-        <div class="vc-item">Cold, over-designed, or SaaS-like</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;border-top:2px solid rgba(255,255,255,0.1);">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:rgba(255,255,255,0.3);margin-bottom:1rem;">What brand is not</div>
+        <div style="font-family:var(--serif);font-size:20px;color:#fff;margin-bottom:1rem;line-height:1.2;">Not a logo</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Not a logo, not a campaign, not a speech, and not personal style.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;border-top:2px solid rgba(30,58,95,0.8);">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--cyan);margin-bottom:1rem;">Why it matters</div>
+        <div style="font-family:var(--serif);font-size:20px;color:#fff;margin-bottom:1rem;line-height:1.2;">Trust is predictability</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Customers trust what they can predict. Teams align when standards are clear.</div>
       </div>
     </div>
-    <div class="divider"></div>
-
-    <!-- 06 MESSAGING -->
-    <div class="sec-label">06 — Messaging Spine</div>
-    <div class="msg-master">
-      <div class="msg-m-h">Travel, made coherent.</div>
-      <div class="msg-m-sub">ORN is the emotional operating system for travel.</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2.5rem;border-left:2px solid var(--green);">
+      <div style="font-size:14px;color:var(--text2);line-height:1.9;font-weight:300;max-width:760px;">Brand strength comes from doing the right thing even when nobody is watching. The ORN standard is <strong style="color:#fff;font-weight:500;">customer protection, delivery integrity, and internal discipline.</strong> Every head must use the same language so employees hear one company voice.</div>
     </div>
-    <div class="msg-lines">
-      <div class="msg-line"><div class="msg-dot"></div>Travel, composed around the human being.</div>
-      <div class="msg-line"><div class="msg-dot"></div>A more meaningful way to move through the world.</div>
-      <div class="msg-line"><div class="msg-dot"></div>From fragmented planning to coherent journeys.</div>
-      <div class="msg-line"><div class="msg-dot"></div>Not just where you go. How it all holds together.</div>
-      <div class="msg-line"><div class="msg-dot"></div>Intelligence that reduces burden.</div>
-      <div class="msg-line"><div class="msg-dot"></div>Care, designed into every layer.</div>
-      <div class="msg-line"><div class="msg-dot"></div>Because memory is the real product.</div>
-      <div class="msg-line"><div class="msg-dot"></div>Cadence, not just code.</div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 07 NARRATIVE -->
-    <div class="sec-label">07 — Narrative System</div>
-    <div class="body-p">Every piece of ORN communication — homepage, press, founder interviews, launch film, investor narrative — should move through this five-act structure. This is not a template. It is the governing logic of how ORN explains itself to the world.</div>
-    <div class="timeline" style="margin-top:2rem;">
-      <div class="tl-track"></div>
-      <div class="tl-step"><div class="tl-dot"><div class="tl-inner"></div></div><div><div class="tl-h">The loss</div><div class="tl-p">Travel became fragmented, noisy, effortful, and emotionally thin. What should have felt expansive began to feel assembled. What should have created memory too often created effort.</div></div></div>
-      <div class="tl-step"><div class="tl-dot"><div class="tl-inner"></div></div><div><div class="tl-h">The recognition</div><div class="tl-p">This was not just a UX problem. It was a failure of coherence — the category had drifted away from what people actually seek from travel. Someone had to see the pattern where others saw noise.</div></div></div>
-      <div class="tl-step"><div class="tl-dot"><div class="tl-inner"></div></div><div><div class="tl-h">The response</div><div class="tl-p">ORN was built to restore that coherence. Authored, not assembled. Built from conviction across ten thousand decisions. A system that thinks, feels, and adapts.</div></div></div>
-      <div class="tl-step"><div class="tl-dot"><div class="tl-inner"></div></div><div><div class="tl-h">The system</div><div class="tl-p">ORN unifies intelligence, planning, delivery, and memory around the traveler into one living architecture. Beneath the surface is depth. At the surface is calm.</div></div></div>
-      <div class="tl-step"><div class="tl-dot"><div class="tl-inner y"></div></div><div><div class="tl-h">The promise</div><div class="tl-p">Journeys can feel worthy again — worthy of the time, trust, money, and memory people place inside them. The true outcome of travel is not the booking. It is what remains.</div></div></div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 08 AUDIENCES -->
-    <div class="sec-label">08 — Audience Messaging</div>
-    <div class="grid-2">
-      <div class="card-sm"><div class="label">Consumer</div><div style="font-family:var(--serif);font-style:italic;font-size:17px;font-weight:300;color:var(--text);line-height:1.5;">"A better way to travel — calmer, more personal, more coherent."</div></div>
-      <div class="card-sm"><div class="label">Press</div><div style="font-family:var(--serif);font-style:italic;font-size:17px;font-weight:300;color:var(--text);line-height:1.5;">"ORN introduces a new standard centred on coherence rather than transaction."</div></div>
-      <div class="card-sm"><div class="label">Partners</div><div style="font-family:var(--serif);font-style:italic;font-size:17px;font-weight:300;color:var(--text);line-height:1.5;">"ORN is building a system where quality delivery becomes part of a coherent whole."</div></div>
-      <div class="card-sm"><div class="label">Investors</div><div style="font-family:var(--serif);font-style:italic;font-size:17px;font-weight:300;color:var(--text);line-height:1.5;">"ORN is creating a new infrastructure layer for traveler-centred travel orchestration."</div></div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 09 REFUSALS -->
-    <div class="sec-label">09 — What ORN Refuses</div>
-    <div class="body-p">A strong brand is defined as much by what it refuses as by what it stands for. These are non-negotiable.</div>
-    <div class="refusals" style="margin-top:1rem;">
-      <div class="refusal">Fragmentation</div><div class="refusal">Shallow optimization</div>
-      <div class="refusal">Emotion as decoration</div><div class="refusal">Functional-but-hollow travel</div>
-      <div class="refusal">Category confinement</div><div class="refusal">Internal incoherence</div>
-      <div class="refusal">Compromise on feel</div><div class="refusal">Transaction without meaning</div>
-      <div class="refusal">Startup-hype language</div><div class="refusal">Feature-first launches</div>
-      <div class="refusal">Crowded, noisy design</div><div class="refusal">Generic luxury</div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 10 INTERFACE -->
-    <div class="sec-label">10 — Interface Direction (from the document)</div>
-    <div class="grid-3">
-      <div class="card-sm"><div class="label">Visual base</div><div class="val">Dark cinematic base with warm, intelligent highlights</div></div>
-      <div class="card-sm"><div class="label">Surface treatment</div><div class="val">Soft glass, editorial spacing, strong typography hierarchy</div></div>
-      <div class="card-sm"><div class="label">Layout principle</div><div class="val">Large moments of breathing room — minimal noise — clarity first</div></div>
-    </div>
-    <div class="divider"></div>
-
-    <!-- 11 LAUNCH -->
-    <div class="sec-label">11 — Launch Architecture</div>
-    <div class="phases">
-      <div class="phase"><span class="phase-num">Phase 01</span><div class="phase-name">Internal alignment</div><div class="phase-desc">Lock brand truth, tone system, homepage narrative, team language</div></div>
-      <div class="phase"><span class="phase-num">Phase 02</span><div class="phase-name">Quiet signal</div><div class="phase-desc">Selective leadership posts, teaser brand statements, minimal visual rollout</div></div>
-      <div class="phase"><span class="phase-num">Phase 03</span><div class="phase-name">Official reveal</div><div class="phase-desc">Homepage live, manifesto live, launch film, press outreach, LinkedIn sequence</div></div>
-      <div class="phase"><span class="phase-num">Phase 04</span><div class="phase-name">Guided proof</div><div class="phase-desc">Sample journeys, product walkthroughs, traveler stories, partner stories</div></div>
-      <div class="phase"><span class="phase-num">Phase 05</span><div class="phase-name">Expansion</div><div class="phase-desc">Curated early access, selected press, investor narratives, community building</div></div>
-    </div>
-    <div class="card-sm"><span style="font-weight:500;color:#fff;">Launch principle:</span> <span style="color:var(--text2);font-size:14px;font-weight:300;">Worldview first → system second → product third. Not loud. Not salesy. Not feature-first. The correct balance: deep meaning + visible system + calm proof.</span></div>
+    <div style="margin-top:2.5rem;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,255,255,0.3);">"Brands are values, purpose and consistency." — Vinay</div>
   </div>
-  <div class="close-banner">
-    <div class="close-q">"ORN has soul because its origin did."</div>
-    <div class="close-attr">Authored by Vinay · Architect, Poet, Operator · ORN Brand Guide v1.0</div>
+
+  <!-- SECTION 02: CASCADE -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">02 — Leadership Cascade<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(22px,3vw,36px);font-weight:300;color:#fff;margin-bottom:0.75rem;">Start with founder language.<br>Translate it into functional commitments.</div>
+    <div style="font-size:14px;color:var(--text3);margin-bottom:3.5rem;font-style:italic;">Do not improvise the philosophy. Personalize examples, but keep the same truth.</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:3rem;">
+      <div style="background:var(--surface);padding:2.5rem 2rem;">
+        <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:var(--green);margin-bottom:1rem;line-height:1;">01</div>
+        <div style="font-family:var(--serif);font-size:18px;color:#fff;margin-bottom:0.75rem;line-height:1.2;">You set the belief</div>
+        <div style="font-size:12px;color:var(--text3);line-height:1.7;font-weight:300;">The founder establishes the doctrine. Non-negotiable.</div>
+      </div>
+      <div style="background:var(--surface);padding:2.5rem 2rem;">
+        <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:rgba(255,255,255,0.25);margin-bottom:1rem;line-height:1;">02</div>
+        <div style="font-family:var(--serif);font-size:18px;color:#fff;margin-bottom:0.75rem;line-height:1.2;">Heads convert belief into standards</div>
+        <div style="font-size:12px;color:var(--text3);line-height:1.7;font-weight:300;">Each function translates into operational commitments.</div>
+      </div>
+      <div style="background:var(--surface);padding:2.5rem 2rem;">
+        <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:rgba(255,255,255,0.25);margin-bottom:1rem;line-height:1;">03</div>
+        <div style="font-family:var(--serif);font-size:18px;color:#fff;margin-bottom:0.75rem;line-height:1.2;">Managers convert standards into routines</div>
+        <div style="font-size:12px;color:var(--text3);line-height:1.7;font-weight:300;">Daily behavior, decisions, and language become the brand.</div>
+      </div>
+      <div style="background:var(--surface);padding:2.5rem 2rem;">
+        <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:rgba(255,255,255,0.25);margin-bottom:1rem;line-height:1;">04</div>
+        <div style="font-family:var(--serif);font-size:18px;color:#fff;margin-bottom:0.75rem;line-height:1.2;">Teams deliver consistent customer experience</div>
+        <div style="font-size:12px;color:var(--text3);line-height:1.7;font-weight:300;">Customers experience one ORN, not many personalities.</div>
+      </div>
+    </div>
+    <div style="background:rgba(58,170,53,0.05);border:1px solid rgba(58,170,53,0.15);border-radius:4px;padding:2rem;display:flex;gap:2rem;align-items:flex-start;">
+      <div style="flex:1;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:0.75rem;">Instruction for all heads</div><div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Do not improvise the philosophy. Personalize examples, but keep the same truth, standards, and customer-first tone.</div></div>
+      <div style="flex:1;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:0.75rem;">Desired result</div><div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Employees should feel that every department is describing one ORN, not many ORNs.</div></div>
+    </div>
+    <div style="margin-top:2.5rem;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,255,255,0.3);">"We all just need to be clear who we are — the BRAND or nobody." — Vinay</div>
   </div>
+
+  <!-- SECTION 03: OPENING TALK -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(30,58,95,0.04) 0%,transparent 60%);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">03 — Your Opening Talk to the Company<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(20px,2.5vw,30px);font-weight:300;color:#fff;margin-bottom:3rem;">Set belief first. Then define the non-negotiables.</div>
+    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2.5rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:1.5rem;">What you should say</div>
+        <div style="font-family:var(--serif);font-size:15px;color:rgba(255,255,255,0.85);line-height:1.85;font-style:italic;">"ORN is a promise system. We do not exist to look good. We exist to protect trust. We are responsible to people who believe in us even when they cannot see what we are doing. That is what brand means here."</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2.5rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:rgba(255,255,255,0.3);margin-bottom:1.5rem;">Standards to state clearly</div>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+          <div style="font-size:13px;color:var(--text2);line-height:1.6;font-weight:300;display:flex;gap:0.75rem;align-items:flex-start;"><span style="color:var(--green);font-family:var(--mono);font-size:10px;margin-top:3px;flex-shrink:0;">01</span>Customer protection comes first.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.6;font-weight:300;display:flex;gap:0.75rem;align-items:flex-start;"><span style="color:var(--green);font-family:var(--mono);font-size:10px;margin-top:3px;flex-shrink:0;">02</span>Delivery must match promise.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.6;font-weight:300;display:flex;gap:0.75rem;align-items:flex-start;"><span style="color:var(--green);font-family:var(--mono);font-size:10px;margin-top:3px;flex-shrink:0;">03</span>No gaps between what we say and what we do.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.6;font-weight:300;display:flex;gap:0.75rem;align-items:flex-start;"><span style="color:var(--green);font-family:var(--mono);font-size:10px;margin-top:3px;flex-shrink:0;">04</span>Responsibility is toward others, not ego.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.6;font-weight:300;display:flex;gap:0.75rem;align-items:flex-start;"><span style="color:var(--green);font-family:var(--mono);font-size:10px;margin-top:3px;flex-shrink:0;">05</span>If we carry the brand, we live the standard.</div>
+        </div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2.5rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:rgba(255,255,255,0.3);margin-bottom:1.5rem;">Tone to hold</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.85;font-weight:300;">Calm, clear, serious, and repeatable. Do not over-explain. Keep returning to trust, consistency, responsibility, and collective identity.</div>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);font-family:var(--serif);font-style:italic;font-size:13px;color:rgba(255,255,255,0.3);">"Responsibility is towards others — those who trust us." — Vinay</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 04/05: IDENTITY + WE ARE THE BRAND -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">04 — We Are the Brand<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(20px,2.5vw,30px);font-weight:300;color:#fff;margin-bottom:0.75rem;">This must land hard across the company.</div>
+    <div style="font-size:14px;color:var(--text3);margin-bottom:3rem;font-style:italic;">We are ORN together, or we weaken the brand.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem;">
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:4px;overflow:hidden;">
+        <div style="background:var(--surface);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:2px;">—</span><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.65;font-weight:300;">We protect the customer, not our own convenience.</div></div>
+        <div style="background:var(--surface);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:2px;">—</span><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.65;font-weight:300;">We do not create gaps between promise and delivery.</div></div>
+        <div style="background:var(--surface);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:2px;">—</span><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.65;font-weight:300;">We act with integrity even when unseen.</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:4px;overflow:hidden;">
+        <div style="background:var(--surface);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:2px;">—</span><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.65;font-weight:300;">We work as one ORN, not as many personal empires.</div></div>
+        <div style="background:var(--surface);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:2px;">—</span><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.65;font-weight:300;">We correct weak behavior fast because inconsistency damages trust.</div></div>
+        <div style="background:var(--surface);padding:1.5rem 2rem;display:flex;gap:1rem;align-items:flex-start;"><span style="color:var(--green);font-size:18px;flex-shrink:0;margin-top:2px;">—</span><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.65;font-weight:300;">We are responsible to those who believe in us.</div></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+      <div style="background:rgba(212,43,30,0.04);border:1px solid rgba(212,43,30,0.15);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--red);margin-bottom:1rem;">Do not say</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.75;font-weight:300;">Bring your own version of ORN.</div>
+      </div>
+      <div style="background:rgba(58,170,53,0.04);border:1px solid rgba(58,170,53,0.15);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:1rem;">Say this instead</div>
+        <div style="font-size:14px;color:var(--text2);line-height:1.75;font-weight:300;">Live the ORN standard fully, or do not represent it at all.</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,255,255,0.3);">"We have to choose who we are and then be — there is no individuality!" — Vinay</div>
+  </div>
+
+  <!-- SECTION 05: DEPARTMENT HEADS -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(30,58,95,0.04) 0%,transparent 50%);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">05 — What Each Department Head Should Emphasise<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(18px,2vw,26px);font-weight:300;color:rgba(255,255,255,0.6);margin-bottom:3rem;">Same core message. Different operational meaning.</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--green);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:1.2rem;">Sales &amp; Growth</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">Do not sell aspiration alone. Sell only what ORN can deliver. Brand grows when promises are accurate and customers feel safe buying from us.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--blue);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);margin-bottom:1.2rem;">Ops &amp; Delivery</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">The brand is won or lost after the sale. Precision, follow-through, and issue ownership are the real face of ORN.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--cyan);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--cyan);margin-bottom:1.2rem;">Supply &amp; Commercial</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">Be sharp, disciplined, and tough in buying. Protect customer value on the back end so ORN can feel premium on the front end.</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--yellow);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--yellow);margin-bottom:1.2rem;">Product &amp; Tech</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">Remove friction. Make trust visible through reliable systems.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid rgba(255,255,255,0.15);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:1.2rem;">People &amp; Culture</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">Reward those who live the brand. Coach those who can improve. Remove repeated behavior that weakens standards.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid rgba(255,255,255,0.15);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:1.2rem;">Finance &amp; Control</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">Guard the discipline that keeps promises affordable and scalable. Good control supports trust, not bureaucracy.</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,255,255,0.3);">"Our job is to protect our customers in all ways — and that will set us apart." — Vinay</div>
+  </div>
+
+  <!-- SECTION 06: TALK TRACKS -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">06 — Department Head Talk Tracks<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-size:14px;color:var(--text3);margin-bottom:3rem;">Short language each leader can use in town halls and team meetings.</div>
+    <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border-radius:4px;overflow:hidden;">
+      <div style="background:var(--surface);padding:1.75rem 2.5rem;display:grid;grid-template-columns:160px 1fr;gap:2rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);">Sales Head</div>
+        <div style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.5;">"We do not chase revenue by stretching the truth. At ORN, trust is part of the product."</div>
+      </div>
+      <div style="background:var(--surface);padding:1.75rem 2.5rem;display:grid;grid-template-columns:160px 1fr;gap:2rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);">Ops Head</div>
+        <div style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.5;">"If the customer trusted us, the job is not done until the promise is fully delivered."</div>
+      </div>
+      <div style="background:var(--surface);padding:1.75rem 2.5rem;display:grid;grid-template-columns:160px 1fr;gap:2rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--cyan);">Supply Head</div>
+        <div style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.5;">"We buy with discipline so the customer receives value without compromise."</div>
+      </div>
+      <div style="background:var(--surface);padding:1.75rem 2.5rem;display:grid;grid-template-columns:160px 1fr;gap:2rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--yellow);">Tech Head</div>
+        <div style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.5;">"Every system should reduce uncertainty and increase consistency."</div>
+      </div>
+      <div style="background:var(--surface);padding:1.75rem 2.5rem;display:grid;grid-template-columns:160px 1fr;gap:2rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);">People Head</div>
+        <div style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.5;">"Brand is behavior. We hire, coach, and promote for that behavior."</div>
+      </div>
+      <div style="background:var(--surface);padding:1.75rem 2.5rem;display:grid;grid-template-columns:160px 1fr;gap:2rem;align-items:center;">
+        <div style="font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);">Finance Head</div>
+        <div style="font-family:var(--serif);font-size:16px;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.5;">"Discipline protects the promise. A strong brand needs strong control."</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,255,255,0.3);">"When a customer wants to do business with you — you are in business." — Vinay</div>
+  </div>
+
+  <!-- SECTION 07: NON NEGOTIABLES -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);background:linear-gradient(to bottom,rgba(212,43,30,0.03) 0%,transparent 40%);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--red);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">07 — Non-Negotiables Every Employee Must Hear<span style="flex:1;height:1px;background:rgba(212,43,30,0.2);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(18px,2vw,26px);font-weight:300;color:rgba(255,255,255,0.6);margin-bottom:3rem;">Repeat these in every team meeting until the language becomes natural.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(212,43,30,0.15);border-radius:4px;overflow:hidden;margin-bottom:2.5rem;">
+      <div style="background:#0a0302;padding:2rem;"><div style="font-size:28px;color:rgba(212,43,30,0.3);margin-bottom:1rem;font-family:var(--mono);">01</div><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300;">We protect the customer, not our own convenience.</div></div>
+      <div style="background:#0a0302;padding:2rem;"><div style="font-size:28px;color:rgba(212,43,30,0.3);margin-bottom:1rem;font-family:var(--mono);">02</div><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300;">We do not create gaps between promise and delivery.</div></div>
+      <div style="background:#0a0302;padding:2rem;"><div style="font-size:28px;color:rgba(212,43,30,0.3);margin-bottom:1rem;font-family:var(--mono);">03</div><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300;">We act with integrity even when unseen.</div></div>
+      <div style="background:#0a0302;padding:2rem;"><div style="font-size:28px;color:rgba(212,43,30,0.3);margin-bottom:1rem;font-family:var(--mono);">04</div><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300;">We work as one ORN, not as many personal empires.</div></div>
+      <div style="background:#0a0302;padding:2rem;"><div style="font-size:28px;color:rgba(212,43,30,0.3);margin-bottom:1rem;font-family:var(--mono);">05</div><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300;">We correct weak behavior fast because inconsistency damages trust.</div></div>
+      <div style="background:#0a0302;padding:2rem;"><div style="font-size:28px;color:rgba(212,43,30,0.3);margin-bottom:1rem;font-family:var(--mono);">06</div><div style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;font-weight:300;">We are responsible to those who believe in us.</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:0.75rem;">What employees should feel</div><div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Clarity, seriousness, unity, and confidence that ORN knows what it stands for.</div></div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:0.75rem;">What employees should do</div><div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Make decisions that preserve trust, reduce friction, and strengthen delivery.</div></div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;"><div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:0.75rem;">Signal of success</div><div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Different teams use different examples, but the message sounds the same.</div></div>
+    </div>
+  </div>
+
+  <!-- SECTION 08: 30 DAY CADENCE -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">08 — 30-Day Communication Cadence<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(18px,2vw,26px);font-weight:300;color:rgba(255,255,255,0.6);margin-bottom:3rem;">Brand language must move from speech to routine.</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-bottom:2.5rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--green);"></div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--green);margin-bottom:0.5rem;">Week 1</div>
+        <div style="font-family:var(--serif);font-size:17px;color:#fff;margin-bottom:1rem;line-height:1.2;">Launch</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">You launch the brand doctrine in an all hands. Each head repeats it within 48 hours.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:rgba(255,255,255,0.1);"></div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:0.5rem;">Week 2</div>
+        <div style="font-family:var(--serif);font-size:17px;color:#fff;margin-bottom:1rem;line-height:1.2;">Translate</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Each function shows what the doctrine means in daily work, decisions, and customer cases.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:rgba(255,255,255,0.1);"></div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:0.5rem;">Week 3</div>
+        <div style="font-family:var(--serif);font-size:17px;color:#fff;margin-bottom:1rem;line-height:1.2;">Review</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Managers review examples of brand-aligned behavior and call out gaps openly.</div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:rgba(255,255,255,0.1);"></div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:0.5rem;">Week 4</div>
+        <div style="font-family:var(--serif);font-size:17px;color:#fff;margin-bottom:1rem;line-height:1.2;">Reaffirm</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.75;font-weight:300;">Leadership reaffirms standards, recognizes role models, and resets weak areas.</div>
+      </div>
+    </div>
+    <div style="background:rgba(58,170,53,0.06);border:1px solid rgba(58,170,53,0.2);border-radius:4px;padding:2rem;text-align:center;">
+      <div style="font-family:var(--serif);font-size:18px;color:#fff;font-style:italic;">Close every meeting with one question:</div>
+      <div style="font-family:var(--serif);font-size:22px;color:var(--green);margin-top:0.75rem;font-weight:300;">"Did our behavior strengthen or weaken trust?"</div>
+    </div>
+    <div style="margin-top:2.5rem;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(255,255,255,0.3);">"1 month — we will be on track." — Vinay</div>
+  </div>
+
+  <!-- SECTION 09: ZERO TOLERANCE -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);background:linear-gradient(to bottom,rgba(212,43,30,0.04) 0%,transparent 30%);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--red);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">09 — Zero Tolerance: Nobody Is Above the Brand<span style="flex:1;height:1px;background:rgba(212,43,30,0.2);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(24px,3.5vw,48px);font-weight:300;color:#fff;line-height:1.05;margin-bottom:2rem;">ORN cannot be represented through personal exceptions, personal ego, or personal style.<br><em style="color:rgba(255,255,255,0.35);">If an individual weakens the standard, the brand must win.</em></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem;">
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--red);margin-bottom:1.5rem;">What leaders should call out</div>
+        <div style="display:flex;flex-direction:column;gap:1px;background:rgba(212,43,30,0.15);border-radius:4px;overflow:hidden;">
+          <div style="background:#0a0302;padding:1.25rem 1.75rem;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;font-weight:300;display:flex;gap:1rem;"><span style="color:rgba(212,43,30,0.6);font-family:var(--mono);font-size:10px;flex-shrink:0;margin-top:2px;">01</span>Stretching truth to close business.</div>
+          <div style="background:#0a0302;padding:1.25rem 1.75rem;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;font-weight:300;display:flex;gap:1rem;"><span style="color:rgba(212,43,30,0.6);font-family:var(--mono);font-size:10px;flex-shrink:0;margin-top:2px;">02</span>Creating delivery exceptions that hurt trust.</div>
+          <div style="background:#0a0302;padding:1.25rem 1.75rem;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;font-weight:300;display:flex;gap:1rem;"><span style="color:rgba(212,43,30,0.6);font-family:var(--mono);font-size:10px;flex-shrink:0;margin-top:2px;">03</span>Using position or history to avoid discipline.</div>
+          <div style="background:#0a0302;padding:1.25rem 1.75rem;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;font-weight:300;display:flex;gap:1rem;"><span style="color:rgba(212,43,30,0.6);font-family:var(--mono);font-size:10px;flex-shrink:0;margin-top:2px;">04</span>Asking for "allowed or not allowed" shortcuts.</div>
+          <div style="background:#0a0302;padding:1.25rem 1.75rem;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.6;font-weight:300;display:flex;gap:1rem;"><span style="color:rgba(212,43,30,0.6);font-family:var(--mono);font-size:10px;flex-shrink:0;margin-top:2px;">05</span>Repeating behavior that proves the person does not belong to the standard.</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+        <div style="background:rgba(212,43,30,0.06);border:1px solid rgba(212,43,30,0.2);border-radius:4px;padding:2rem;flex:1;">
+          <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--red);margin-bottom:1rem;">Vinay — direct</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="font-family:var(--serif);font-size:14px;color:rgba(255,255,255,0.7);font-style:italic;line-height:1.5;">"We cannot be sorry — sorry is not our culture."</div>
+            <div style="font-family:var(--serif);font-size:14px;color:rgba(255,255,255,0.7);font-style:italic;line-height:1.5;">"Live up to the brand or get lost."</div>
+            <div style="font-family:var(--serif);font-size:14px;color:rgba(255,255,255,0.7);font-style:italic;line-height:1.5;">"No place."</div>
+          </div>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;flex:1;">
+          <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:1rem;">Leadership instruction</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.8;font-weight:300;">Correct early. Correct clearly. Do not normalize weak behavior — repeated compromise teaches the company that standards are optional. A brand survives only when the standard is stronger than the individual.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOUR & IDENTITY SECTION -->
+  <div style="padding:5rem;border-bottom:1px solid var(--border);">
+    <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.22em;color:var(--green);margin-bottom:3rem;display:flex;align-items:center;gap:1rem;">Colour &amp; Visual Identity<span style="flex:1;height:1px;background:var(--border);"></span></div>
+    <div style="font-family:var(--serif);font-size:clamp(22px,3vw,38px);font-weight:300;color:#fff;margin-bottom:0.75rem;">The ORN colour system</div>
+    <div style="font-size:14px;color:var(--text3);margin-bottom:3rem;">Six primary brand colours. Each carries meaning. Together they represent the range of ORN — from depth to energy.</div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:2.5rem;">
+      <div style="background:#000;padding:0;">
+        <div style="height:120px;background:#1e3a5f;"></div>
+        <div style="padding:1.25rem 1rem;">
+          <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.1em;">Navy</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#fff;margin-bottom:0.5rem;">#1E3A5F</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;font-weight:300;">Depth. Authority. Foundation.</div>
+        </div>
+      </div>
+      <div style="background:#000;padding:0;">
+        <div style="height:120px;background:#1a6fb5;"></div>
+        <div style="padding:1.25rem 1rem;">
+          <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.1em;">Blue</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#fff;margin-bottom:0.5rem;">#1A6FB5</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;font-weight:300;">Intelligence. Clarity. Trust.</div>
+        </div>
+      </div>
+      <div style="background:#000;padding:0;">
+        <div style="height:120px;background:#00a0d6;"></div>
+        <div style="padding:1.25rem 1rem;">
+          <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.1em;">Cyan</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#fff;margin-bottom:0.5rem;">#00A0D6</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;font-weight:300;">Discovery. Movement. Openness.</div>
+        </div>
+      </div>
+      <div style="background:#000;padding:0;">
+        <div style="height:120px;background:#3aaa35;"></div>
+        <div style="padding:1.25rem 1rem;">
+          <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.1em;">Green</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#fff;margin-bottom:0.5rem;">#3AAA35</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;font-weight:300;">Go. Growth. Primary accent.</div>
+        </div>
+      </div>
+      <div style="background:#000;padding:0;">
+        <div style="height:120px;background:#f5c400;"></div>
+        <div style="padding:1.25rem 1rem;">
+          <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.1em;">Yellow</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#fff;margin-bottom:0.5rem;">#F5C400</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;font-weight:300;">Memory. Warmth. Delight.</div>
+        </div>
+      </div>
+      <div style="background:#000;padding:0;">
+        <div style="height:120px;background:#d42b1e;"></div>
+        <div style="padding:1.25rem 1rem;">
+          <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,0.4);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.1em;">Red</div>
+          <div style="font-family:var(--mono);font-size:11px;color:#fff;margin-bottom:0.5rem;">#D42B1E</div>
+          <div style="font-size:11px;color:var(--text3);line-height:1.5;font-weight:300;">Urgency. Attention. Standards.</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2.5rem;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:1.5rem;">Typography</div>
+        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="display:flex;align-items:baseline;gap:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border);">
+            <div style="font-family:var(--serif);font-size:32px;color:#fff;font-weight:400;flex-shrink:0;">Aa</div>
+            <div><div style="font-size:13px;color:#fff;font-weight:400;margin-bottom:0.2rem;">Libre Baskerville</div><div style="font-size:11px;color:var(--text3);">Headlines · Quotes · Brand voice</div></div>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:1.5rem;">
+            <div style="font-family:var(--sans);font-size:28px;color:#fff;font-weight:300;flex-shrink:0;">Aa</div>
+            <div><div style="font-size:13px;color:#fff;font-weight:400;margin-bottom:0.2rem;">Inter</div><div style="font-size:11px;color:var(--text3);">Body · Labels · UI · Navigation</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:2rem;">
+        <div style="font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:var(--text3);margin-bottom:1.5rem;">Usage rules</div>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+          <div style="font-size:13px;color:var(--text2);line-height:1.65;font-weight:300;display:flex;gap:0.75rem;"><span style="color:var(--green);flex-shrink:0;">—</span>Black is the primary canvas. Always.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.65;font-weight:300;display:flex;gap:0.75rem;"><span style="color:var(--green);flex-shrink:0;">—</span>Green is the only primary action colour.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.65;font-weight:300;display:flex;gap:0.75rem;"><span style="color:var(--green);flex-shrink:0;">—</span>Red signals zero-tolerance and urgency only.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.65;font-weight:300;display:flex;gap:0.75rem;"><span style="color:var(--green);flex-shrink:0;">—</span>The six bars always appear together as one unit.</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.65;font-weight:300;display:flex;gap:0.75rem;"><span style="color:var(--green);flex-shrink:0;">—</span>No gradients on the logo. Never place on busy imagery.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING DOCTRINE -->
+  <div style="padding:6rem 5rem;text-align:center;background:linear-gradient(135deg,#050504 0%,#0d0d0c 100%);">
+    <div style="font-family:var(--serif);font-size:clamp(28px,5vw,64px);font-weight:300;color:#fff;line-height:1.1;margin-bottom:2rem;">We have to choose who we are<br><em style="color:rgba(255,255,255,0.35);">and then be.</em></div>
+    <div style="font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.22em;color:rgba(255,255,255,0.25);margin-bottom:3rem;">There is no individuality. — Vinay</div>
+    <div style="display:flex;justify-content:center;gap:3px;margin:0 auto;width:fit-content;">
+      <div style="width:36px;height:4px;background:#1e3a5f;border-radius:2px;"></div>
+      <div style="width:36px;height:4px;background:#1a6fb5;border-radius:2px;"></div>
+      <div style="width:36px;height:4px;background:#00a0d6;border-radius:2px;"></div>
+      <div style="width:36px;height:4px;background:#3aaa35;border-radius:2px;"></div>
+      <div style="width:36px;height:4px;background:#f5c400;border-radius:2px;"></div>
+      <div style="width:36px;height:4px;background:#d42b1e;border-radius:2px;"></div>
+    </div>
+  </div>
+
 </div>
 
-<!-- ═══════════════════════════════════════════════
-  PANEL: WEBSITE
-═══════════════════════════════════════════════ -->
 <div class="panel" id="panel-website">
   <div class="site-nav">
     <div class="site-logo"><img src="orn-logo.png" alt="ORN"><span>ORN</span></div>
